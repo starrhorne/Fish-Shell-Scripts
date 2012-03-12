@@ -1,0 +1,8 @@
+h1. Starr's Fish Scripts
+
+This is my personal fish setup. Feel free to use what you like. 
+
+h2.  Credits
+
+The fish-nuggets project. (https://github.com/zmalltalker/fish-nuggets).
+
