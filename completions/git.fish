@@ -68,6 +68,8 @@ complete -c git -n '__fish_use_subcommand' -x -a gc --description 'Cleanup unnec
 
 
 complete -c git -n 'contains \'checkout\' (commandline -poc)' -a '(__git_branch_list)' --description "Check out this branch"
+complete -c git -n 'contains \'co\' (commandline -poc)' -a '(__git_branch_list)' --description "Check out this branch"
+complete -x -c gco -a '(__git_branch_list)' --description "Check out this branch"
 # complete -c git -n 'contains \'branch\' (commandline -poc)' -a '(git_br())' -f --description "Git branch"
 
 #
@@ -218,6 +220,8 @@ complete -c git -n 'contains \'rebase\' (commandline -poc)' -l continue -x --des
 complete -c git -n 'contains \'rebase\' (commandline -poc)' -l onto -x --description 'Next topic'
 complete -c git -n 'contains \'rebase\' (commandline -poc)' -l onto -x --description 'TopicA topicB'
 complete -c git -n 'contains \'rebase\' (commandline -poc)' -l onto -x --description 'TopicA~3 topicA'
+
+complete -c git -n 'contains \'rebase\' (commandline -poc)' -a '(__git_branch_list)' --description "Rebase to this branch"
 
 
 #
