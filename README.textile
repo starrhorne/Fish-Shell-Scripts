@@ -1,6 +1,6 @@
 h1. Starr's Fish Scripts
 
-This is my personal fish setup. Feel free to use what you like. 
+This is my personal fish setup. Feel free to use what you like. However, this is not a maintained open source project. Things are liable to change suddenly and without apparent reason. :) 
 
 h2.  Credits
 
