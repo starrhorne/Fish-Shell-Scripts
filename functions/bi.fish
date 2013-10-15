@@ -1,3 +1,3 @@
-function bi --description 'rvmsudo bundle install'
-  rvmsudo bundle install
+function bi --description 'bundle install'
+  bundle install
 end

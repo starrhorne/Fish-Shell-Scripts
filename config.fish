@@ -1,8 +1,12 @@
-for p in /usr/bin /usr/local/bin /usr/local/mysql/bin ~/.gem/bin ~/.gem/ruby/1.8/bin ~/bin ~/.config/fish/bin 
+for p in /opt/bin /opt/local/bin ~/.config/fish/bin /usr/bin /usr/local/bin
 	if test -d $p
 		set -x PATH $p $PATH
 	end
 end
+
+set PATH $HOME/.rbenv/bin $PATH
+set PATH $HOME/.rbenv/shims $PATH
+rbenv rehash >/dev/null ^&1
 
 set -x EDITOR "vim"
 

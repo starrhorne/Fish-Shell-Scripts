@@ -1,3 +1,3 @@
 function rc
-  be rails c
+  rails c
 end
