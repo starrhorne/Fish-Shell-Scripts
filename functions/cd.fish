@@ -2,6 +2,24 @@ function cd --description "Change working directory"
   # Source a .rvmrc file in a directory after changing to it, if it exists.
   # To disable this fature, set rvm_project_rvmrc=0 in $HOME/.rvmrc
 
+  # Skip history in subshells
+  if status --is-command-substitution
+    builtin cd $argv
+    return $status
+  end
+
+  # Avoid set completions
+  set -l previous $PWD
+
+  if test $argv[1] = - ^/dev/null
+    if test "$__fish_cd_direction" = next ^/dev/null
+      nextd
+    else
+      prevd
+    end
+    return $status
+  end
+
   builtin cd "$argv"
   if test "$rvm_project_rvmrc" != 0
     set -l cwd $PWD
